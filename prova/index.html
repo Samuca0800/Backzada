@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Minha página</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./api.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Minha Empresa</h1>
+      <nav>
+        <ul>
+          <li><a href="#vendedores">Vendedores</a></li>
+          <li><a href="#vendas">Vendas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="vendedores">
+        <h2>Lista de Vendedores</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="vendedores-list">
+          </tbody>
+        </table>
+        <form id="novo-vendedor-form">
+          <h3>Novo vendedor</h3>
+          <label>
+            Nome:
+            <input type="text" name="nome" required>
+          </label>
+          <br>
+          <label>
+            E-mail:
+            <input type="email" name="email" required>
+          </label>
+          <br>
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <section id="vendas">
+        <h2>Lista de Vendas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Quantidade</th>
+              <th>Vendedor</th>
+              <th>Produto</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="vendas-list">
+          </tbody>
+        </table>
+        <form id="nova-venda-form">
+          <h3>Nova venda</h3>
+          <label>
+            Vendedor:
+            <select name="vendedor" required>
+            </select>
+          </label>
+          <br>
+          <label>
+            Produto:
+            <select name="produto" required>
+            </select>
+          </label>
+          <br>
+          <label>
+            Quantidade:
+            <input type="number" name="quantidade" required>
+          </label>
+          <br>
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+    </main>
+    
+    <script src="index.js"></script>
+  </body>
+</html>
